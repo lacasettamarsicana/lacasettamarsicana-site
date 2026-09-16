@@ -3,9 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="La Casetta Marsicana - casa vacanze in Abruzzo tra natura, relax e accoglienza." />
+  <meta name="description" content="La Casetta Marsicana è una casa vacanze a Cappadocia, nel cuore della Marsica: natura, sentieri, borghi e impianti sciistici di Camporotondo." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#16381d" />
-  <title>La Casetta Marsicana | Casa vacanze in Abruzzo</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:site_name" content="La Casetta Marsicana" />
+  <meta property="og:title" content="La Casetta Marsicana | Casa vacanze a Cappadocia (AQ)" />
+  <meta property="og:description" content="Un rifugio nel cuore della Marsica, tra natura, sentieri, borghi e montagna." />
+  <meta property="og:image" content="https://www.lacasettamarsicana.it/images/logo-completo.png" />
+  <meta property="og:image:alt" content="Logo La Casetta Marsicana" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="La Casetta Marsicana | Casa vacanze a Cappadocia (AQ)" />
+  <meta name="twitter:description" content="Un rifugio nel cuore della Marsica, tra natura, sentieri, borghi e montagna." />
+  <meta name="twitter:image" content="https://www.lacasettamarsicana.it/images/logo-completo.png" />
+
+  <title>La Casetta Marsicana | Casa vacanze a Cappadocia (AQ)</title>
 
   <link rel="icon" type="image/png" href="./images/logo-icona.png" />
   <link rel="stylesheet" href="./css/style.css?v=20260916-5" />
@@ -14,6 +29,29 @@
   <link rel="stylesheet" href="./css/services.css?v=20260916-2" />
   <link rel="stylesheet" href="./css/territory.css?v=20260916-1" />
   <link rel="stylesheet" href="./css/legal.css?v=20260916-1" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "La Casetta Marsicana",
+    "description": "Casa vacanze a Cappadocia, nel cuore della Marsica, tra natura, sentieri, borghi e montagna.",
+    "image": "https://www.lacasettamarsicana.it/images/logo-completo.png",
+    "email": "info@lacasettamarsicana.it",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Caduti di Via Fani, 6",
+      "addressLocality": "Cappadocia",
+      "addressRegion": "AQ",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.0060278,
+      "longitude": 13.2759722
+    }
+  }
+  </script>
 
   <style>
     img { max-width: 100%; height: auto; }
@@ -260,13 +298,7 @@
           <address class="location-address">Via Caduti di Via Fani, 6<br />Cappadocia (AQ)</address>
         </div>
 
-        <div class="map-consent" id="mapConsent">
-          <div class="map-consent-inner">
-            <strong>Visualizza la posizione su Google Maps</strong>
-            <p>La mappa viene caricata solo quando scegli di visualizzarla. In quel momento il browser si collegherà ai servizi di Google Maps.</p>
-            <button class="btn btn-primary" id="loadMap" type="button">Carica la mappa</button>
-          </div>
-        </div>
+        <div class="map-consent" id="mapConsent" role="img" aria-label="Mappa illustrata della posizione di La Casetta Marsicana a Cappadocia"></div>
 
         <div class="map-actions">
           <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=42.0060278%2C13.2759722" target="_blank" rel="noopener noreferrer">Apri in Google Maps</a>
@@ -301,6 +333,5 @@
 
   <script src="./js/main.js?v=20260916-4"></script>
   <script src="./js/gallery.js?v=20260916-1"></script>
-  <script src="./js/map.js?v=20260916-1"></script>
 </body>
 </html>
