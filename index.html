@@ -1,103 +1,227 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="La Casetta Marsicana, casa vacanze in Abruzzo. Natura, tranquillità e autenticità nel cuore della Marsica.">
-  <title>La Casetta Marsicana</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="La Casetta Marsicana - casa vacanze in Abruzzo tra natura, relax e accoglienza."
+  />
+  <title>La Casetta Marsicana | Casa vacanze in Abruzzo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#home" aria-label="La Casetta Marsicana - Home">
-        <span class="brand-mark">LCM</span>
-        <span>La Casetta Marsicana</span>
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="La Casetta Marsicana home">
+        <img
+          src="images/logo-completo.jpg"
+          alt="Logo La Casetta Marsicana"
+          class="brand-logo"
+        />
+        <div class="brand-copy">
+          <span class="brand-kicker">Casa vacanze in Abruzzo</span>
+          <img
+            src="images/logo-scritta.jpg"
+            alt="La Casetta Marsicana"
+            class="brand-wordmark"
+          />
+        </div>
       </a>
-      <nav class="nav" aria-label="Navigazione principale">
+
+      <nav class="main-nav" id="mainNav">
         <a href="#casa">La Casetta</a>
         <a href="#servizi">Servizi</a>
         <a href="#territorio">Territorio</a>
-        <a href="#contatti" class="nav-cta">Contatti</a>
+        <a href="#contatti">Contatti</a>
+        <a href="#contatti" class="btn btn-nav">Richiedi disponibilità</a>
       </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Apri menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
   <main>
-    <section id="home" class="hero">
+    <section class="hero" id="home">
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Abruzzo · Marsica</p>
-          <h1>Un rifugio semplice, autentico e immerso nella natura.</h1>
-          <p class="hero-text">La Casetta Marsicana nasce per chi cerca silenzio, aria di montagna e ritmi più lenti. Un punto di partenza ideale per vivere l’Abruzzo tra borghi, sentieri e panorami.</p>
+        <div class="hero-text">
+          <p class="eyebrow">Natura, quiete e accoglienza</p>
+          <h1>Il tuo rifugio nel cuore della Marsica</h1>
+          <p class="hero-description">
+            Un luogo semplice e autentico dove rallentare, respirare l'Abruzzo
+            e goderti il fascino della montagna, tra paesaggi, silenzi e calore di casa.
+          </p>
           <div class="hero-actions">
-            <a class="button primary" href="#contatti">Richiedi disponibilità</a>
-            <a class="button secondary" href="#casa">Scopri la casa</a>
+            <a href="#contatti" class="btn btn-primary">Richiedi disponibilità</a>
+            <a href="#casa" class="btn btn-secondary">Scopri la casa</a>
           </div>
         </div>
-        <div class="hero-card" aria-label="Placeholder immagine principale">
-          <div class="mountain-shape"></div>
-          <p>Qui inseriremo la foto principale della casa</p>
+
+        <div class="hero-card">
+          <img
+            src="images/logo-icona.jpg"
+            alt="Simbolo La Casetta Marsicana"
+            class="hero-card-logo"
+          />
+          <h2>La Casetta Marsicana</h2>
+          <p>
+            Una casa vacanze ispirata ai colori e all’anima del territorio:
+            il verde dei boschi, il blu delle montagne, il calore del legno
+            e la tranquillità della natura.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="casa" class="section">
-      <div class="container two-col">
+    <section class="intro-strip">
+      <div class="container strip-grid">
         <div>
+          <strong>Atmosfera</strong>
+          <span>accogliente e rilassata</span>
+        </div>
+        <div>
+          <strong>Ideale per</strong>
+          <span>famiglie, coppie e soggiorni nella natura</span>
+        </div>
+        <div>
+          <strong>Esperienza</strong>
+          <span>autentica, semplice, marsicana</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="casa">
+      <div class="container section-grid">
+        <div class="section-copy">
           <p class="eyebrow">La Casetta</p>
-          <h2>Accogliente, pratica, senza fronzoli.</h2>
+          <h2>Una casa pensata per farti sentire subito bene</h2>
+          <p>
+            La Casetta Marsicana nasce per offrire un soggiorno confortevole
+            in un contesto naturale unico. Qui il tempo rallenta: puoi rilassarti,
+            partire alla scoperta dei dintorni o semplicemente goderti il piacere
+            di una pausa lontano dal rumore.
+          </p>
+          <p>
+            Questa prima versione del sito è volutamente essenziale e leggera.
+            I contenuti definitivi, le fotografie reali della casa e le informazioni
+            dettagliate verranno inseriti progressivamente.
+          </p>
         </div>
-        <div>
-          <p>Il sito è stato pensato per essere leggero e diretto: poche informazioni utili, fotografie grandi e nessun elemento superfluo. Questa sezione ospiterà la descrizione degli ambienti, dei posti letto e delle caratteristiche della casa.</p>
-        </div>
+
+        <aside class="info-box">
+          <h3>Perché scegliere La Casetta Marsicana</h3>
+          <ul>
+            <li>Atmosfera accogliente e familiare</li>
+            <li>Contesto naturale tra boschi e montagne</li>
+            <li>Ottimo punto di partenza per scoprire l'Abruzzo</li>
+            <li>Esperienza rilassante, autentica e senza eccessi</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section id="servizi" class="section section-alt">
+    <section class="section section-soft" id="servizi">
       <div class="container">
-        <p class="eyebrow">Servizi</p>
-        <h2>Tutto quello che serve per un soggiorno comodo.</h2>
-        <div class="cards">
-          <article class="card"><h3>Casa attrezzata</h3><p>Cucina, riscaldamento e dotazioni principali.</p></article>
-          <article class="card"><h3>Relax</h3><p>Ambienti tranquilli, perfetti per staccare dalla città.</p></article>
-          <article class="card"><h3>Natura</h3><p>Montagna, sentieri e paesaggi marsicani a portata di mano.</p></article>
-          <article class="card"><h3>Contatto diretto</h3><p>Richieste di disponibilità senza intermediari.</p></article>
+        <div class="section-heading center">
+          <p class="eyebrow">Servizi</p>
+          <h2>Tutto il necessario per un soggiorno sereno</h2>
+        </div>
+
+        <div class="cards-grid">
+          <article class="feature-card">
+            <h3>Comfort di casa</h3>
+            <p>
+              Spazi accoglienti, atmosfera curata e tutto il necessario
+              per sentirti a tuo agio.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Relax e natura</h3>
+            <p>
+              Un punto di appoggio perfetto per respirare aria buona
+              e ritrovare ritmi più lenti.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <h3>Posizione strategica</h3>
+            <p>
+              Ideale per scoprire borghi, montagne, sentieri e tradizioni
+              del territorio marsicano.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="territorio" class="section">
-      <div class="container two-col">
-        <div>
-          <p class="eyebrow">Scopri la Marsica</p>
-          <h2>Borghi, boschi e montagne.</h2>
+    <section class="section" id="territorio">
+      <div class="container section-grid reversed">
+        <div class="visual-panel">
+          <img
+            src="images/logo-completo.jpg"
+            alt="Logo completo La Casetta Marsicana"
+          />
         </div>
-        <div>
-          <p>Qui potremo inserire una selezione di luoghi da visitare, escursioni, ristoranti e attività nei dintorni. La sezione può crescere nel tempo senza appesantire il sito.</p>
+
+        <div class="section-copy">
+          <p class="eyebrow">Territorio</p>
+          <h2>Tra montagne, boschi e identità abruzzese</h2>
+          <p>
+            Il nome stesso richiama la Marsica, una terra fatta di natura,
+            panorami, tradizioni e autenticità. Il sito si ispira proprio
+            a questo immaginario: niente effetti superflui, ma colori,
+            materiali e sensazioni che ricordano la montagna e il senso di casa.
+          </p>
+          <p>
+            In questa sezione potremo inserire più avanti itinerari,
+            punti d’interesse, attività e consigli utili per gli ospiti.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="contatti" class="section contact-section">
-      <div class="container contact-box">
+    <section class="section section-soft" id="contatti">
+      <div class="container contact-panel">
         <div>
           <p class="eyebrow">Contatti</p>
-          <h2>Vuoi sapere se La Casetta è disponibile?</h2>
-          <p>Per ora possiamo usare email o WhatsApp. In seguito potremo collegare un calendario o un sistema di prenotazione esterno.</p>
+          <h2>Richiedi informazioni o disponibilità</h2>
+          <p>
+            Per ora possiamo raccogliere le richieste in modo semplice via email
+            o telefono/WhatsApp. In un secondo momento potremo aggiungere anche
+            un sistema di prenotazione dedicato.
+          </p>
         </div>
-        <div class="contact-actions">
-          <a class="button primary" href="mailto:info@lacasettamarsicana.it">Scrivi una email</a>
-          <a class="button secondary" href="#">WhatsApp in arrivo</a>
+
+        <div class="contact-box">
+          <a href="mailto:info@lacasettamarsicana.it">info@lacasettamarsicana.it</a>
+          <p>Inserire qui anche numero di telefono o WhatsApp quando vuoi.</p>
+          <a href="mailto:info@lacasettamarsicana.it" class="btn btn-primary full">
+            Scrivi ora
+          </a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-wrap">
-      <p>© <span id="year"></span> La Casetta Marsicana</p>
-      <p>lacasettamarsicana.it</p>
+    <div class="container footer-inner">
+      <img
+        src="images/logo-scritta.jpg"
+        alt="La Casetta Marsicana"
+        class="footer-logo"
+      />
+      <p>© <span id="year"></span> La Casetta Marsicana · Casa vacanze in Abruzzo</p>
     </div>
   </footer>
 
