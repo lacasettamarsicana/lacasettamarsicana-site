@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 104px;
 }
 
 body {
@@ -495,6 +496,10 @@ a {
 }
 
 @media (max-width: 640px) {
+  html {
+    scroll-padding-top: 90px;
+  }
+
   .brand-wordmark {
     height: 34px;
   }
