@@ -43,7 +43,7 @@
 
 .map-consent {
   min-height: 430px;
-  background: var(--ivory) url("../images/mappa-cappadocia.svg") center / cover no-repeat;
+  background: var(--ivory) url("../images/mappa-casetta-marsicana.webp") center / cover no-repeat;
   border-top: 1px solid rgba(22, 56, 29, 0.08);
   border-bottom: 1px solid rgba(22, 56, 29, 0.08);
 }
@@ -93,7 +93,7 @@
   .map-consent {
     min-height: 320px;
     background-size: cover;
-    background-position: 58% center;
+    background-position: center;
   }
 
   .map-actions {
