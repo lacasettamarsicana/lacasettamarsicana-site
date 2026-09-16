@@ -1,0 +1,43 @@
+.territory-intro {
+  margin-bottom: 1.5rem;
+}
+
+.territory-points-title {
+  margin: 1.6rem 0 0.9rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.8rem;
+  color: var(--green-dark);
+}
+
+.territory-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.territory-list li {
+  position: relative;
+  padding: 0.8rem 0.9rem 0.8rem 2rem;
+  border-radius: 12px;
+  background: rgba(237, 242, 234, 0.72);
+  color: var(--text-main);
+  border: 1px solid rgba(22, 56, 29, 0.08);
+}
+
+.territory-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0.85rem;
+  top: 0.72rem;
+  color: var(--green-main);
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .territory-list {
+    grid-template-columns: 1fr;
+  }
+}
