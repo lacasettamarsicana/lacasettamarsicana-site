@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="./css/style.css?v=20260916-3" />
+  <link rel="stylesheet" href="./css/style.css?v=20260916-4" />
 
   <style>
     img { max-width: 100%; height: auto; }
@@ -108,6 +108,43 @@
           </ul>
         </aside>
       </div>
+
+      <div class="container gallery-block" aria-labelledby="gallery-title">
+        <div class="gallery-heading">
+          <div>
+            <p class="eyebrow">Galleria</p>
+            <h2 id="gallery-title">Uno sguardo alla Casetta</h2>
+          </div>
+          <p>Scorri le immagini oppure clicca su una foto per aprirla a tutto schermo.</p>
+        </div>
+
+        <div class="gallery-shell">
+          <button class="gallery-arrow gallery-arrow-left" id="galleryPrev" type="button" aria-label="Foto precedenti">‹</button>
+
+          <div class="gallery-track" id="galleryTrack">
+            <button class="gallery-item" type="button" data-gallery-index="0" aria-label="Apri foto soggiorno">
+              <img src="images/gallery-01.svg" alt="Soggiorno della Casetta Marsicana" loading="lazy" />
+            </button>
+            <button class="gallery-item" type="button" data-gallery-index="1" aria-label="Apri foto camera">
+              <img src="images/gallery-02.svg" alt="Camera da letto della Casetta Marsicana" loading="lazy" />
+            </button>
+            <button class="gallery-item" type="button" data-gallery-index="2" aria-label="Apri foto cucina">
+              <img src="images/gallery-03.svg" alt="Cucina della Casetta Marsicana" loading="lazy" />
+            </button>
+            <button class="gallery-item" type="button" data-gallery-index="3" aria-label="Apri foto esterno">
+              <img src="images/gallery-04.svg" alt="Esterno della Casetta Marsicana" loading="lazy" />
+            </button>
+            <button class="gallery-item" type="button" data-gallery-index="4" aria-label="Apri foto panorama">
+              <img src="images/gallery-05.svg" alt="Panorama nei dintorni della Casetta Marsicana" loading="lazy" />
+            </button>
+            <button class="gallery-item" type="button" data-gallery-index="5" aria-label="Apri foto dettagli">
+              <img src="images/gallery-06.svg" alt="Dettagli e atmosfera della Casetta Marsicana" loading="lazy" />
+            </button>
+          </div>
+
+          <button class="gallery-arrow gallery-arrow-right" id="galleryNext" type="button" aria-label="Foto successive">›</button>
+        </div>
+      </div>
     </section>
 
     <section class="section section-soft" id="servizi">
@@ -175,6 +212,20 @@
     </section>
   </main>
 
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Galleria fotografica ingrandita">
+    <button class="lightbox-backdrop" type="button" id="lightboxBackdrop" aria-label="Chiudi galleria"></button>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Chiudi">×</button>
+      <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" type="button" aria-label="Foto precedente">‹</button>
+      <figure class="lightbox-figure">
+        <img id="lightboxImage" src="" alt="" />
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+      <button class="lightbox-arrow lightbox-next" id="lightboxNext" type="button" aria-label="Foto successiva">›</button>
+      <div class="lightbox-counter" id="lightboxCounter" aria-live="polite"></div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="container footer-inner">
       <img src="images/logo-scritta-bianco.png" alt="La Casetta Marsicana" class="footer-logo" />
@@ -182,6 +233,6 @@
     </div>
   </footer>
 
-  <script src="./js/main.js?v=20260916-3"></script>
+  <script src="./js/main.js?v=20260916-4"></script>
 </body>
 </html>
