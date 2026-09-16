@@ -4,15 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="La Casetta Marsicana - casa vacanze in Abruzzo tra natura, relax e accoglienza." />
+  <meta name="theme-color" content="#16381d" />
   <title>La Casetta Marsicana | Casa vacanze in Abruzzo</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+  <link rel="icon" type="image/png" href="./images/logo-icona.png" />
   <link rel="stylesheet" href="./css/style.css?v=20260916-5" />
   <link rel="stylesheet" href="./css/gallery.css?v=20260916-1" />
-  <link rel="stylesheet" href="./css/location.css?v=20260916-1" />
+  <link rel="stylesheet" href="./css/location.css?v=20260916-2" />
   <link rel="stylesheet" href="./css/services.css?v=20260916-2" />
   <link rel="stylesheet" href="./css/territory.css?v=20260916-1" />
 
@@ -261,14 +259,13 @@
           <address class="location-address">Via Caduti di Via Fani, 6<br />Cappadocia (AQ)</address>
         </div>
 
-        <iframe
-          class="map-frame"
-          title="Mappa di La Casetta Marsicana"
-          src="https://www.google.com/maps?q=42.0060278%2C13.2759722&z=18&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen>
-        </iframe>
+        <div class="map-consent" id="mapConsent">
+          <div class="map-consent-inner">
+            <strong>Visualizza la posizione su Google Maps</strong>
+            <p>La mappa viene caricata solo quando scegli di visualizzarla. In quel momento il browser si collegherà ai servizi di Google Maps.</p>
+            <button class="btn btn-primary" id="loadMap" type="button">Carica la mappa</button>
+          </div>
+        </div>
 
         <div class="map-actions">
           <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=42.0060278%2C13.2759722" target="_blank" rel="noopener noreferrer">Apri in Google Maps</a>
@@ -297,5 +294,6 @@
 
   <script src="./js/main.js?v=20260916-4"></script>
   <script src="./js/gallery.js?v=20260916-1"></script>
+  <script src="./js/map.js?v=20260916-1"></script>
 </body>
 </html>
