@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Mappa illustrata della posizione della Casetta Marsicana a Cappadocia</title>
+  <desc id="desc">Illustrazione statica con strade, rilievi e indicatore della Casetta Marsicana a Cappadocia, in provincia dell'Aquila.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#edf2ea"/>
+      <stop offset="1" stop-color="#f7f3ea"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#16381d" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="520" fill="url(#bg)"/>
+
+  <g fill="none" stroke="#285232" stroke-opacity="0.12" stroke-width="2">
+    <path d="M-40 95 C110 20 245 45 370 115 S650 185 805 95 S1050 15 1245 90"/>
+    <path d="M-50 145 C100 70 245 90 385 160 S645 240 815 150 S1060 70 1250 140"/>
+    <path d="M-30 390 C120 315 260 325 400 405 S660 480 825 390 S1050 320 1240 370"/>
+    <path d="M-35 440 C110 370 270 380 420 455 S680 520 835 440 S1075 375 1240 420"/>
+  </g>
+
+  <g fill="#285232" fill-opacity="0.13">
+    <path d="M0 0 H305 L205 115 L115 82 L42 160 L0 145 Z"/>
+    <path d="M1200 0 H900 L975 92 L1060 58 L1138 130 L1200 118 Z"/>
+    <path d="M0 520 H250 L182 438 L102 462 L35 404 L0 420 Z"/>
+    <path d="M1200 520 H930 L1005 438 L1088 468 L1155 405 L1200 425 Z"/>
+  </g>
+
+  <g stroke="#d8d9db" stroke-width="20" stroke-linecap="round" fill="none">
+    <path d="M55 350 C210 315 320 270 455 285 S720 365 870 315 S1055 210 1160 235"/>
+    <path d="M280 505 C350 415 420 365 520 350 S735 350 820 270 S910 120 1030 58"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="8" stroke-linecap="round" fill="none">
+    <path d="M55 350 C210 315 320 270 455 285 S720 365 870 315 S1055 210 1160 235"/>
+    <path d="M280 505 C350 415 420 365 520 350 S735 350 820 270 S910 120 1030 58"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="86" y="420" font-size="28" fill="#5c4523" font-weight="700">Cappadocia</text>
+    <text x="86" y="450" font-size="18" fill="#635b4d">AQ · Abruzzo</text>
+  </g>
+
+  <g transform="translate(695 200)" filter="url(#shadow)">
+    <path d="M0-58c-34 0-61 27-61 61 0 47 61 111 61 111S61 50 61 3C61-31 34-58 0-58Z" fill="#16381d"/>
+    <circle cx="0" cy="3" r="21" fill="#f7f3ea"/>
+  </g>
+
+  <g transform="translate(745 170)" font-family="Arial, Helvetica, sans-serif">
+    <rect x="0" y="0" rx="18" ry="18" width="350" height="102" fill="#ffffff" stroke="#16381d" stroke-opacity="0.12"/>
+    <text x="24" y="40" font-size="25" fill="#16381d" font-weight="700">La Casetta Marsicana</text>
+    <text x="24" y="72" font-size="18" fill="#635b4d">Via Caduti di Via Fani, 6</text>
+  </g>
+
+  <g transform="translate(865 404)" font-family="Arial, Helvetica, sans-serif">
+    <rect x="0" y="0" rx="16" ry="16" width="275" height="72" fill="#ffffff" fill-opacity="0.9" stroke="#16381d" stroke-opacity="0.10"/>
+    <text x="20" y="30" font-size="16" fill="#635b4d">Coordinate</text>
+    <text x="20" y="53" font-size="18" fill="#16381d" font-weight="700">42.0060278, 13.2759722</text>
+  </g>
+</svg>
