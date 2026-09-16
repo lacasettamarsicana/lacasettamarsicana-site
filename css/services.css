@@ -1,0 +1,91 @@
+.services-intro {
+  margin: -0.25rem auto 0;
+  max-width: 700px;
+  color: var(--text-soft);
+  font-size: 1.02rem;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+  margin-top: 2.25rem;
+}
+
+.amenity-card {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(22, 56, 29, 0.09);
+  border-radius: var(--radius-md);
+  padding: 1.55rem 1.65rem;
+  box-shadow: 0 10px 24px rgba(22, 56, 29, 0.06);
+}
+
+.amenity-card h3 {
+  margin: 0 0 1rem;
+  color: var(--green-dark);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.65rem;
+  line-height: 1.1;
+}
+
+.amenity-card-wide {
+  grid-column: 1 / -1;
+}
+
+.amenity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.72rem;
+}
+
+.amenity-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  color: var(--text-soft);
+  font-size: 1rem;
+}
+
+.amenity-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: -0.02rem;
+  color: var(--green-main);
+  font-weight: 800;
+}
+
+.amenity-list-columns {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem 1.5rem;
+}
+
+.status-badge {
+  display: inline-block;
+  margin-left: 0.45rem;
+  padding: 0.16rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(92, 69, 35, 0.12);
+  color: var(--brown-main);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  vertical-align: 0.05em;
+}
+
+@media (max-width: 760px) {
+  .amenities-grid,
+  .amenity-list-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .amenity-card-wide {
+    grid-column: auto;
+  }
+
+  .amenity-card {
+    padding: 1.3rem 1.25rem;
+  }
+}
