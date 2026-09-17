@@ -1,0 +1,72 @@
+.contact-panel > div:first-child > p:not(.eyebrow) {
+  max-width: 58ch;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+}
+
+.contact-highlights {
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.contact-highlights li {
+  position: relative;
+  padding-left: 1.7rem;
+  color: var(--green-dark);
+  font-weight: 650;
+}
+
+.contact-highlights li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: -0.02rem;
+  color: var(--green-main);
+  font-weight: 900;
+}
+
+.contact-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-box::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: var(--brown-main);
+}
+
+.contact-box-title {
+  margin: 0 0 0.7rem;
+  color: var(--green-dark);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.75rem;
+  line-height: 1.1;
+}
+
+.contact-box .btn {
+  margin-top: 0.3rem;
+}
+
+.contact-microcopy {
+  display: block;
+  margin-top: 0.8rem;
+  color: var(--text-soft);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+  .contact-highlights {
+    margin-top: 1.1rem;
+  }
+
+  .contact-box-title {
+    font-size: 1.6rem;
+  }
+}
