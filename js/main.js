@@ -21,7 +21,7 @@ if (yearSpan) {
 // Conversion layer: keeps the static HTML simple while improving the contact flow.
 const conversionStyles = document.createElement("link");
 conversionStyles.rel = "stylesheet";
-conversionStyles.href = "./css/conversion.css?v=20260917-1";
+conversionStyles.href = "./css/conversion.css?v=20260917-2";
 document.head.appendChild(conversionStyles);
 
 const contactSection = document.getElementById("contatti");
@@ -86,5 +86,47 @@ if (contactSection) {
       note.textContent = "Il pulsante apre il tuo programma di posta con una richiesta già impostata.";
       contactBox.appendChild(note);
     }
+  }
+}
+
+// Registration identifiers: shown publicly in the footer and added to the structured data.
+const registrationCodes = {
+  cin: "IT066023C266DNPV6T",
+  cir: "066023CVP0021"
+};
+
+const footerMeta = document.querySelector(".footer-meta");
+
+if (footerMeta && !footerMeta.querySelector(".registration-codes")) {
+  const codes = document.createElement("p");
+  codes.className = "registration-codes";
+  codes.innerHTML = `
+    <span><strong>CIN</strong> ${registrationCodes.cin}</span>
+    <span><strong>CIR</strong> ${registrationCodes.cir}</span>
+  `;
+  const footerLinks = footerMeta.querySelector(".footer-links");
+  footerMeta.insertBefore(codes, footerLinks || null);
+}
+
+const structuredData = document.querySelector('script[type="application/ld+json"]');
+
+if (structuredData) {
+  try {
+    const data = JSON.parse(structuredData.textContent);
+    data.identifier = [
+      {
+        "@type": "PropertyValue",
+        "propertyID": "CIN",
+        "value": registrationCodes.cin
+      },
+      {
+        "@type": "PropertyValue",
+        "propertyID": "CIR",
+        "value": registrationCodes.cir
+      }
+    ];
+    structuredData.textContent = JSON.stringify(data, null, 2);
+  } catch (error) {
+    console.warn("Impossibile aggiornare i dati strutturati con CIN e CIR.", error);
   }
 }
