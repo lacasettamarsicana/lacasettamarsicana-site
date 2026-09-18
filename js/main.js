@@ -43,7 +43,7 @@ if (contactSection) {
       highlights.className = "contact-highlights";
       highlights.innerHTML = `
         <li>Contatto diretto con la gestione</li>
-        <li>Pet friendly e LGBTQ+ friendly</li>
+        <li>Pet friendly</li>
         <li>Navetta da/per la Stazione di Tagliacozzo su richiesta</li>
       `;
       contactIntro.appendChild(highlights);
