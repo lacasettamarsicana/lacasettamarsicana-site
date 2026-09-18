@@ -31,7 +31,7 @@
   <link rel="alternate" hreflang="de" href="https://www.lacasettamarsicana.it/de/" />
   <link rel="alternate" hreflang="x-default" href="https://www.lacasettamarsicana.it/" />
   <link rel="icon" type="image/png" href="/images/logo-icona.png" />
-  <link rel="stylesheet" href="/css/style.css?v=20260918-2" />
+  <link rel="stylesheet" href="/css/style.css?v=20260918-3" />
   <link rel="stylesheet" href="/css/gallery.css?v=20260916-1" />
   <link rel="stylesheet" href="/css/location.css?v=20260916-2" />
   <link rel="stylesheet" href="/css/services.css?v=20260916-2" />
@@ -97,11 +97,17 @@
         <a href="#territorio">Explore</a>
         <a href="#contatti">Contact</a>
         <a href="#dove-siamo">Location</a>
-        <div class="language-selector" aria-label="Select language">
-          <a class="language-switch" href="/" hreflang="it" lang="it" aria-label="View the website in Italiano"><span aria-hidden="true">🇮🇹</span><span>IT</span></a>
-          <span class="language-switch active" aria-current="page"><span aria-hidden="true">🇬🇧</span><span>EN</span></span>
-          <a class="language-switch" href="/de/" hreflang="de" lang="de" aria-label="View the website in Deutsch"><span aria-hidden="true">🇩🇪</span><span>DE</span></a>
-        </div>
+        <details class="language-menu">
+          <summary class="language-current" aria-label="Select language: English">
+            <svg class="flag-icon" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#C8102E" stroke-width="4"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#C8102E" stroke-width="7"/></svg>
+            <span class="language-chevron" aria-hidden="true">▾</span>
+          </summary>
+          <div class="language-dropdown" role="list">
+            <a class="language-option" href="/" hreflang="it" lang="it"><svg class="flag-icon" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="20" height="40" x="0" fill="#009246"/><rect width="20" height="40" x="20" fill="#fff"/><rect width="20" height="40" x="40" fill="#ce2b37"/></svg><span>Italiano</span></a>
+            <span class="language-option active" aria-current="page"><svg class="flag-icon" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#C8102E" stroke-width="4"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="12"/><path d="M30 0V40M0 20H60" stroke="#C8102E" stroke-width="7"/></svg><span>English</span></span>
+            <a class="language-option" href="/de/" hreflang="de" lang="de"><svg class="flag-icon" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><rect width="60" height="13.34" y="0" fill="#000"/><rect width="60" height="13.34" y="13.33" fill="#dd0000"/><rect width="60" height="13.34" y="26.66" fill="#ffce00"/></svg><span>Deutsch</span></a>
+          </div>
+        </details>
         <a href="#contatti" class="btn btn-nav">Check availability</a>
       </nav>
 
@@ -367,7 +373,7 @@
     </div>
   </footer>
 
-  <script src="/js/main.js?v=20260918-2"></script>
+  <script src="/js/main.js?v=20260918-3"></script>
   <script src="/js/gallery.js?v=20260916-1"></script>
 </body>
 </html>
