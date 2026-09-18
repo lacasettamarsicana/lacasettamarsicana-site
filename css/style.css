@@ -561,3 +561,25 @@ a {
   font-size: 1.05rem;
   line-height: 1;
 }
+
+
+.language-selector {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.language-switch.active {
+  background: var(--green-dark);
+  color: var(--white);
+  border-color: var(--green-dark);
+  cursor: default;
+}
+
+@media (max-width: 1100px) {
+  .language-selector {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.2rem 0;
+  }
+}
