@@ -1,6 +1,7 @@
 const menuToggle = document.getElementById("menuToggle");
 const mainNav = document.getElementById("mainNav");
 const yearSpan = document.getElementById("year");
+const languageMenus = document.querySelectorAll(".language-menu");
 
 if (menuToggle && mainNav) {
   menuToggle.addEventListener("click", () => {
@@ -17,6 +18,18 @@ if (menuToggle && mainNav) {
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
+
+document.addEventListener("click", (event) => {
+  languageMenus.forEach((menu) => {
+    if (!menu.contains(event.target)) menu.removeAttribute("open");
+  });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    languageMenus.forEach((menu) => menu.removeAttribute("open"));
+  }
+});
 
 // Conversion layer: keeps the static HTML simple while improving the contact flow.
 const conversionStyles = document.createElement("link");
