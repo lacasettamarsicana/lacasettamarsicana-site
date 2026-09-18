@@ -38,8 +38,7 @@ if (contactSection) {
   if (contactIntro) {
     const introParagraph = contactIntro.querySelector("p:not(.eyebrow)");
     if (introParagraph) {
-      introParagraph.textContent =
-        isGerman
+      introParagraph.textContent = isGerman
         ? "Wissen Sie schon, wann Sie nach Cappadocia kommen möchten? Schreiben Sie uns Ihre gewünschten Reisedaten – wir antworten Ihnen mit Informationen zur Verfügbarkeit und allem Wichtigen für die Planung Ihres Aufenthalts."
         : isEnglish
         ? "Already know when you would like to visit Cappadocia? Send us your preferred dates and we will reply with availability and useful information to plan your stay."
@@ -50,10 +49,22 @@ if (contactSection) {
       const highlights = document.createElement("ul");
       highlights.className = "contact-highlights";
       highlights.innerHTML = isGerman
-        ? `\n        <li>Direkter Kontakt mit der Unterkunft</li>\n        <li>Haustiere willkommen</li>\n        <li>Shuttle vom/zum Bahnhof Tagliacozzo auf Anfrage</li>\n      `
+        ? `
+        <li>Direkter Kontakt mit der Unterkunft</li>
+        <li>Haustiere willkommen</li>
+        <li>Shuttle vom/zum Bahnhof Tagliacozzo auf Anfrage</li>
+      `
         : isEnglish
-        ? `\n        <li>Direct contact with the property manager</li>\n        <li>Pet friendly</li>\n        <li>Shuttle to/from Tagliacozzo railway station on request</li>\n      `
-        : `\n        <li>Contatto diretto con la gestione</li>\n        <li>Pet friendly</li>\n        <li>Navetta da/per la Stazione di Tagliacozzo su richiesta</li>\n      `;
+        ? `
+        <li>Direct contact with the property manager</li>
+        <li>Pet friendly</li>
+        <li>Shuttle to/from Tagliacozzo railway station on request</li>
+      `
+        : `
+        <li>Contatto diretto con la gestione</li>
+        <li>Pet friendly</li>
+        <li>Navetta da/per la Stazione di Tagliacozzo su richiesta</li>
+      `;
       contactIntro.appendChild(highlights);
     }
   }
@@ -66,13 +77,16 @@ if (contactSection) {
     if (!contactBox.querySelector(".contact-box-title")) {
       const title = document.createElement("h3");
       title.className = "contact-box-title";
-      title.textContent = isGerman ? "Verfügbarkeit anfragen" : isEnglish ? "Check availability" : "Chiedi disponibilità";
+      title.textContent = isGerman
+        ? "Verfügbarkeit anfragen"
+        : isEnglish
+        ? "Check availability"
+        : "Chiedi disponibilità";
       contactBox.prepend(title);
     }
 
     if (textParagraph) {
-      textParagraph.textContent =
-        isGerman
+      textParagraph.textContent = isGerman
         ? "Damit wir Ihnen schneller antworten können, nennen Sie bitte die Reisedaten, die Anzahl der Gäste und ob Sie mit einem Haustier reisen."
         : isEnglish
         ? "To help us reply more quickly, please include your dates, number of guests and whether you are travelling with a pet."
@@ -80,22 +94,39 @@ if (contactSection) {
     }
 
     if (ctaButton) {
-      const subject = encodeURIComponent(isGerman
-        ? "Verfügbarkeitsanfrage - La Casetta Marsicana"
-        : isEnglish
-        ? "Availability request - La Casetta Marsicana"
-        : "Richiesta disponibilità - La Casetta Marsicana");
-      const body = encodeURIComponent(isGerman
-        ? "Hallo, ich möchte die Verfügbarkeit der La Casetta Marsicana anfragen.\n\nGewünschte Reisedaten: \nAnzahl der Gäste: \nHaustier dabei: ja / nein\n\nWeitere Informationen: "
-        : isEnglish
-        ? "Hello, I would like to check availability at La Casetta Marsicana.\n\nPreferred dates: \nNumber of guests: \nTravelling with a pet: yes / no\n\nAdditional information: "
-        : "Ciao, vorrei chiedere la disponibilità de La Casetta Marsicana.\n\nDate di interesse: \nNumero di ospiti: \nAnimale al seguito: sì / no\n\nAltre informazioni: ");
+      const subject = encodeURIComponent(
+        isGerman
+          ? "Verfügbarkeitsanfrage - La Casetta Marsicana"
+          : isEnglish
+          ? "Availability request - La Casetta Marsicana"
+          : "Richiesta disponibilità - La Casetta Marsicana"
+      );
+
+      const body = encodeURIComponent(
+        isGerman
+          ? "Hallo, ich möchte die Verfügbarkeit der La Casetta Marsicana anfragen.\n\nGewünschte Reisedaten: \nAnzahl der Gäste: \nHaustier dabei: ja / nein\n\nWeitere Informationen: "
+          : isEnglish
+          ? "Hello, I would like to check availability at La Casetta Marsicana.\n\nPreferred dates: \nNumber of guests: \nTravelling with a pet: yes / no\n\nAdditional information: "
+          : "Ciao, vorrei chiedere la disponibilità de La Casetta Marsicana.\n\nDate di interesse: \nNumero di ospiti: \nAnimale al seguito: sì / no\n\nAltre informazioni: "
+      );
+
       ctaButton.href = `mailto:info@lacasettamarsicana.it?subject=${subject}&body=${body}`;
-      ctaButton.textContent = isGerman ? "Verfügbarkeit per E-Mail anfragen" : isEnglish ? "Check availability by email" : "Chiedi disponibilità via email";
+      ctaButton.textContent = isGerman
+        ? "Verfügbarkeit per E-Mail anfragen"
+        : isEnglish
+        ? "Check availability by email"
+        : "Chiedi disponibilità via email";
     }
 
     if (emailLink) {
-      emailLink.setAttribute("aria-label", isGerman ? "E-Mail an info@lacasettamarsicana.it" : isEnglish ? "Email info@lacasettamarsicana.it" : "Scrivi a info@lacasettamarsicana.it");
+      emailLink.setAttribute(
+        "aria-label",
+        isGerman
+          ? "E-Mail an info@lacasettamarsicana.it"
+          : isEnglish
+          ? "Email info@lacasettamarsicana.it"
+          : "Scrivi a info@lacasettamarsicana.it"
+      );
     }
 
     if (!contactBox.querySelector(".contact-microcopy")) {
@@ -149,6 +180,6 @@ if (structuredData) {
     ];
     structuredData.textContent = JSON.stringify(data, null, 2);
   } catch (error) {
-    console.warn("Impossibile aggiornare i dati strutturati con CIN e CIR.", error);
+    console.warn("Unable to update structured data with CIN and CIR.", error);
   }
 }
