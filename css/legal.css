@@ -101,3 +101,20 @@
     padding: 2rem 0 3.5rem;
   }
 }
+
+
+.legal-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+@media (max-width: 700px) {
+  .legal-header-actions {
+    gap: 0.5rem;
+  }
+
+  .legal-header-link {
+    font-size: 0.92rem;
+  }
+}
