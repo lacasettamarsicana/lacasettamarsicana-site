@@ -25,7 +25,7 @@ if (galleryTrack) {
     item.setAttribute("aria-label", galleryLabels.open(number));
 
     const photo = document.createElement("img");
-    photo.src = `/images/gallery-${String(number).padStart(2, "0")}.webp`;
+    photo.src = `/images/gallery-${String(number).padStart(2, "0")}.webp?v=20260927-gallery2`;
     photo.alt = galleryLabels.alt(number);
     photo.loading = "lazy";
     photo.decoding = "async";
