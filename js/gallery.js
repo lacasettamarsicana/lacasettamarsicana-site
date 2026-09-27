@@ -1,6 +1,40 @@
 const galleryTrack = document.getElementById("galleryTrack");
 const galleryPrev = document.getElementById("galleryPrev");
 const galleryNext = document.getElementById("galleryNext");
+// Per aggiungere nuove foto, aggiorna soltanto questo totale.
+const galleryPhotoCount = 66;
+const galleryLocale = (document.documentElement.lang || "it").split("-")[0].toLowerCase();
+const galleryTranslations = {
+  it: { open: n => `Apri foto ${n}`, alt: n => `Foto ${n} della Casetta Marsicana` },
+  en: { open: n => `Open photo ${n}`, alt: n => `Photo ${n} of La Casetta Marsicana` },
+  de: { open: n => `Foto ${n} öffnen`, alt: n => `Foto ${n} von La Casetta Marsicana` },
+  es: { open: n => `Abrir foto ${n}`, alt: n => `Foto ${n} de La Casetta Marsicana` },
+  fr: { open: n => `Ouvrir la photo ${n}`, alt: n => `Photo ${n} de La Casetta Marsicana` }
+};
+const galleryLabels = galleryTranslations[galleryLocale] || galleryTranslations.it;
+
+// Le prime quattro immagini sono gia presenti nell'HTML anche senza JavaScript.
+// Le altre sono create qui, per tutte e cinque le lingue, con caricamento differito.
+if (galleryTrack) {
+  const newPhotos = document.createDocumentFragment();
+  for (let number = 5; number <= galleryPhotoCount; number++) {
+    const item = document.createElement("button");
+    item.className = "gallery-item";
+    item.type = "button";
+    item.dataset.galleryIndex = String(number - 1);
+    item.setAttribute("aria-label", galleryLabels.open(number));
+
+    const photo = document.createElement("img");
+    photo.src = `/images/gallery-${String(number).padStart(2, "0")}.webp`;
+    photo.alt = galleryLabels.alt(number);
+    photo.loading = "lazy";
+    photo.decoding = "async";
+    item.appendChild(photo);
+    newPhotos.appendChild(item);
+  }
+  galleryTrack.appendChild(newPhotos);
+}
+
 const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
 
 const lightbox = document.getElementById("lightbox");
