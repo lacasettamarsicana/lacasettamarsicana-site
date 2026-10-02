@@ -434,6 +434,71 @@ a {
   margin-top: 0;
 }
 
+.ota-booking {
+  margin-top: 1.15rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid rgba(22, 56, 29, 0.14);
+}
+
+.ota-booking-label {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.ota-booking-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.ota-btn {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.72rem 0.85rem;
+  border: 1px solid rgba(22, 56, 29, 0.16);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--green-dark);
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(22, 56, 29, 0.07);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.ota-btn:hover,
+.ota-btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(22, 56, 29, 0.12);
+}
+
+.ota-btn-booking:hover,
+.ota-btn-booking:focus-visible {
+  border-color: #003b95;
+}
+
+.ota-btn-airbnb:hover,
+.ota-btn-airbnb:focus-visible {
+  border-color: #ff385c;
+}
+
+.ota-btn img {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+}
+
+@media (max-width: 640px) {
+  .ota-booking-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* FOOTER */
 .site-footer {
   background: var(--green-dark);
