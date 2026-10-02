@@ -421,7 +421,7 @@ a {
   padding: 1.6rem;
 }
 
-.contact-box a:first-child {
+.contact-box > a[href^="mailto:"]:not(.btn) {
   display: inline-block;
   font-size: 1.2rem;
   font-weight: 700;

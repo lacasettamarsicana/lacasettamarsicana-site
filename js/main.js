@@ -34,7 +34,7 @@ document.addEventListener("keydown", (event) => {
 // Conversion layer: keeps the static HTML simple while improving the contact flow.
 const conversionStyles = document.createElement("link");
 conversionStyles.rel = "stylesheet";
-conversionStyles.href = "/css/conversion.css?v=20260917-2";
+conversionStyles.href = "/css/conversion.css?v=20261002-1";
 document.head.appendChild(conversionStyles);
 
 const currentLanguage = document.documentElement.lang.toLowerCase();
@@ -188,15 +188,16 @@ if (contactSection) {
       const note = document.createElement("small");
       note.className = "contact-microcopy";
       note.textContent = isFrench
-        ? "Le bouton ouvre votre application de messagerie avec une demande déjà préparée."
+        ? "Le bouton vert « Vérifier les disponibilités par e-mail » ouvre votre application de messagerie avec une demande déjà préparée."
         : isSpanish
-        ? "El botón abre tu aplicación de correo con una solicitud ya preparada."
+        ? "El botón verde « Consultar disponibilidad por correo » abre tu aplicación de correo con una solicitud ya preparada."
         : isGerman
-        ? "Die Schaltfläche öffnet Ihr E-Mail-Programm mit einer bereits ausgefüllten Anfrage."
+        ? "Die grüne Schaltfläche „Verfügbarkeit per E-Mail anfragen“ öffnet Ihr E-Mail-Programm mit einer bereits ausgefüllten Anfrage."
         : isEnglish
-        ? "The button opens your email app with a pre-filled request."
-        : "Il pulsante apre il tuo programma di posta con una richiesta già impostata.";
-      contactBox.appendChild(note);
+        ? "The green “Check availability by email” button opens your email app with a pre-filled request."
+        : "Il pulsante verde “Chiedi disponibilità via email” apre il tuo programma di posta con una richiesta già impostata.";
+      const otaBooking = contactBox.querySelector(".ota-booking");
+      contactBox.insertBefore(note, otaBooking || null);
     }
   }
 }
